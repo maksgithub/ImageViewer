@@ -1,0 +1,17 @@
+﻿<Application x:Class="ImageViewer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ImageViewer"
+             xmlns:converters="clr-namespace:ImageViewer.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DataTemplates.xaml" />
+                <ResourceDictionary Source="MainStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            <converters:InvertBoolToVisibilityConverter x:Key="InvertBoolToVisibilityConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
